@@ -15,3 +15,9 @@ void InitList(SqList *L){
     }
     L->length=0;
 }
+
+int main() {
+    SqList L;
+    InitList(&L);
+    return 0;
+}
