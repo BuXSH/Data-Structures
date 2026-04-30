@@ -39,7 +39,6 @@ int ListInsert(SqList *L,int i,ElemType e){
     }
     // 3.插入操作
     // 赋值
-    // 注意：e传过来的是地址，需要使用*拿到对应的值
     L->data[i-1]=e;
     // 表长加1
     L->length++;
