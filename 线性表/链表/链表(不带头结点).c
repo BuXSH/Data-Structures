@@ -2,30 +2,22 @@
 #include <stdlib.h>
 #define ElemType int
 
-// 带头结点的单链表
+// 不带头结点的单链表
 
 typedef struct LNode{
     ElemType data; //数据域
     struct LNode *next; //指针域
 }LNode,*LinkList;
 
-// 初始化单链表(带头结点)
+// 初始化单链表(不带头结点)
 int InitList(LinkList *L){
-    // 分配一个头结点
-    *L = (LNode *)malloc(sizeof(LNode));
-    // 内存不足，分配失败
-    if (*L == NULL) {
-        return 0;
-    }
-    // 头结点之后暂时还没有节点
-    (*L)->next = NULL;
-
+    *L = NULL;
     return 1;
 }
 
-// 判断单链表是否为空(带头结点)
+// 判断单链表是否为空(不带头结点)
 int Empty(LinkList L){
-    if(L->next==NULL){
+    if(L==NULL){
         return 1;
     } else{
         return 0;
